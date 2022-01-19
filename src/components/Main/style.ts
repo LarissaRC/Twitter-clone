@@ -92,7 +92,7 @@ const iconCSS = css`
     fill: var(--gray);
 
     &:hover,
-    &:active {
+    &.active {
         fill: var(--twitter);
     }
 `;
