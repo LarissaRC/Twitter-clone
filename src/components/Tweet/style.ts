@@ -42,16 +42,19 @@ export const Body = styled.div`
 `;
 
 export const Avatar = styled.div`
-    width: 49px;
-    height: 49px;
+    
+    > img {
+        width: 49px;
+        height: 49px;
 
-    border-radius: 50%;
-    flex-shrink: 0;
-    background: var(--gray);
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: var(--gray);
 
-    position: absolute;
-    top: 0;
-    left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 `;
 
 export const Content = styled.div`
@@ -105,9 +108,13 @@ export const ImageContent = styled.div`
     background: var(--outline);
     border-radius: 14px;
 
-    cursor: pointer;
-    &:hover {
-        opacity: 0.7;
+    > img {
+        width: 100%;
+        height: min(285px, max(175px, 41vw));
+
+        background: var(--outline);
+        border-radius: 14px;
+        object-fit: cover;
     }
 `;
 

@@ -156,6 +156,14 @@ export const Avatar = styled.div`
     border-radius: 50%;
 
     background: var(--gray);
+
+    > img {
+        width: 39px;
+        height: 39px;
+
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
 `;
 
 export const ProfileData = styled.div`

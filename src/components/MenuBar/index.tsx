@@ -51,7 +51,9 @@ const MenuBar: React.FC = () => {
           </Topside>
 
           <Botside>
-              <Avatar />
+              <Avatar>
+                  <img src="https://pbs.twimg.com/profile_images/1415378538732130306/yrSdG-_x_400x400.jpg" alt="User Avatar" />
+              </Avatar>
 
               <ProfileData>
                   <strong>LarissaRC</strong>

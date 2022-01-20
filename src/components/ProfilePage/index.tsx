@@ -6,17 +6,20 @@ const ProfilePage: React.FC = () => {
   return(
     <Container>
         <Banner>
-            <Avatar />
+            <img src="https://pbs.twimg.com/profile_banners/1158852667843723264/1626612883/1500x500" alt="User banner" />
+            <Avatar>
+                <img src="https://pbs.twimg.com/profile_images/1415378538732130306/yrSdG-_x_400x400.jpg" alt="User avatar" />
+            </Avatar>
         </Banner>
 
         <ProfileData>
             <EditButton outlined>Editar perfil</EditButton>
 
-            <h1>Larissa Roque Carvalho</h1>
+            <h1>LarissaRC</h1>
             <h2>@lrc0309</h2>
 
             <p>
-                Front-end developer
+                19 ▫️ Front-end developer sandy/junior ▫️ 🦝
             </p>
 
             <ul>

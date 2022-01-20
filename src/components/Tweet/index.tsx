@@ -18,7 +18,29 @@ import {
     LikeIcon
 } from './style';
 
-const Tweet: React.FC = () => {
+interface Props {
+    image: string;
+    name: string;
+    nickname: string;
+    date: string;
+    text: string;
+    tweetImage: string;
+    comments: number;
+    retweets: number;
+    likes: number;
+}
+
+const Tweet: React.FC<Props> = ({
+    image,
+    name,
+    nickname,
+    date,
+    text,
+    tweetImage,
+    comments,
+    retweets,
+    likes
+}) => {
   return(
       <Container>
           <Retweeted>
@@ -27,31 +49,35 @@ const Tweet: React.FC = () => {
           </Retweeted>
 
           <Body>
-              <Avatar />
+              <Avatar>
+                  <img src={image} alt="User avatar of the retweet" />
+              </Avatar>
               <Content>
                   <Header>
-                      <strong>Perfil abc</strong>
-                      <span>@perfil01</span>
+                      <strong>{name}</strong>
+                      <span>{nickname}</span>
                       <Dot />
-                      <time>19 de jan</time>
+                      <time>{date}</time>
                   </Header>
 
-                  <Description>Título da postagem</Description>
+                  <Description>{text}</Description>
 
-                  <ImageContent />
+                  <ImageContent>
+                      <img src={tweetImage} alt="Tweet" />
+                  </ImageContent>
 
                   <Icons>
                       <Status>
                           <CommentIcon />
-                          12
+                          {comments}
                       </Status>
                       <Status>
                           <RetweetIcon />
-                          20
+                          {retweets}
                       </Status>
                       <Status>
                           <LikeIcon />
-                          34
+                          {likes}
                       </Status>
                   </Icons>
               </Content>

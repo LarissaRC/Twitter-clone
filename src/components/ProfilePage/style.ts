@@ -27,19 +27,30 @@ export const Banner = styled.div`
     background: var(--twitter);
 
     position: relative;
+
+    > img {
+        flex-shrink: 0;
+    
+        width: 100%;
+        height: min(33vw, 199px);
+
+        position: relative;
+    }
 `;
 
 export const Avatar = styled.div`
-    width: max(45px, min(135px, 22vw));
-    height: max(45px, min(135px, 22vw));
+    > img {
+        width: max(45px, min(135px, 22vw));
+        height: max(45px, min(135px, 22vw));
 
-    border: 3.75px solid var(--primary);
-    background: var(--gray);
-    border-radius: 50%;
+        border: 3.75px solid var(--primary);
+        background: var(--gray);
+        border-radius: 50%;
 
-    position: absolute;
-    bottom: max(-60px, -10vw);
-    left: 15px;
+        position: absolute;
+        bottom: max(-60px, -10vw);
+        left: 15px;
+    }
 `;
 
 export const ProfileData = styled.div`

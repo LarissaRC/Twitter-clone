@@ -5,10 +5,17 @@ export const Container = styled.div`
   flex-direction: column;
 
   font-size: 14px;
+  cursor: pointer;
 
   > span {
       color: var(--gray);
 
       margin-bottom: 3px;
+  }
+
+  > strong {
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;

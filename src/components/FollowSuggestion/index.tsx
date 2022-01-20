@@ -8,17 +8,20 @@ import {
 } from './style';
 
 interface Props {
+    image: string;
     name: string;
     nickname: string;
 }
 
 const FollowSuggestion: React.FC<Props> = ({
-    name, nickname
+    image, name, nickname
 }) => {
   return(
     <Container>
         <div>
-            <Avatar />
+            <Avatar>
+                <img src={image} alt="perfil avatar" />
+            </Avatar>
 
             <Info>
                 <strong>{name}</strong>

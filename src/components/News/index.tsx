@@ -2,11 +2,18 @@ import React from 'react';
 
 import { Container } from './style';
 
-const News: React.FC = () => {
+interface Props {
+  description: string;
+  title: string;
+}
+
+const News: React.FC<Props> = ({
+  description, title
+}) => {
   return(
       <Container>
-          <span>Assuntos do momento do Brasil</span>
-          <strong>BBB 2022 começou, nem vi</strong>
+          <span>{description}</span>
+          <strong>{title}</strong>
       </Container>
   );
 }
